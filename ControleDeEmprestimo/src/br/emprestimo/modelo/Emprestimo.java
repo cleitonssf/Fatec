@@ -13,8 +13,11 @@ public class Emprestimo {
 	public Livro getLivro() {
 		return livro;
 	}
-
+	
 	public void setLivro(Livro livro) {
+		if (livro == null){
+			throw new RuntimeException("Livro inválido");
+		}
 		this.livro = livro;
 	}
 
@@ -31,9 +34,16 @@ public class Emprestimo {
 	}
 
 	public void setDataEmprestimo(String dataEmprestimo) {
+		if(validaData(dataEmprestimo))
 		this.dataEmprestimo = dataEmprestimo;
+		else
+			 throw new RuntimeException("Data inválida");
 	}
 
+
+	
+	
+	
 	public String getDataDevolucao() {
 		return dataDevolucao;
 	}
