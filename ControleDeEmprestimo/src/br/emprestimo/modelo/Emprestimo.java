@@ -37,6 +37,7 @@ public class Emprestimo {
 		if(validaData(dataEmprestimo))
 		this.dataEmprestimo = dataEmprestimo;
 		else
+			
 			 throw new RuntimeException("Data inválida");
 	}
 

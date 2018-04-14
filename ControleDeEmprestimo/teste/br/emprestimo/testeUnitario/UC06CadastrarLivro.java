@@ -12,10 +12,11 @@ public class UC06CadastrarLivro {
     public static Livro livro;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		livro = new Livro();
-		livro.setIsbn("121212");
-		livro.setTitulo("Engenharia de Software");
-		livro.setAutor("Pressman");
+		livro = ObtemLivro.comDadosValidos();
+		//livro = new Livro();
+		//livro.setIsbn("121212");
+		//livro.setTitulo("Engenharia de Software");
+		//livro.setAutor("Pressman");
 	}    
 
 	@AfterClass
